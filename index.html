@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="stylesheet" href="Dom.css">
+</head>
+<body>
+    <table>
+    <th></th>
+<!--heading-->
+        <p class="heading"><b>DOM Manipulation with Forms</b></p>
+        <form class="inputfiled" id="forms">
+        </th>
+<!--First name--><tr>
+            <td><label for="fname"><b>First name:</b></label><br></td>
+            <td>
+            <input type="text" id="fname" name="fname" required><br>
+        </td>
+        </tr>
+<!--Last name--> <tr>           
+          <td><label for="lname"><b>Last name:</b></label><br></td>
+          <td>
+            <input type="text" id="lname" name="lname" required><br>
+        </td>
+        </tr>
+<!--Address--> <tr>             
+           <td><label for="address"><b>Address:</b></label><br></td> 
+           <td>
+            <textarea name="Address" id="address" rows="4" cols="30" required></textarea><br>
+        </td>
+        </tr>
+<!--Pincode-->   <tr>              
+          <td><label for="pincode"><b>Pincode:</b></label><br></td>  
+          <td>
+            <input type="number" id="pincode" name="pincode" size="6" required><br>
+        </td>
+        </tr>
+<!--Gender-->  <tr>              
+          <td><label for="gender-select"><b>Gender :</b></label><br></td>  
+          <td>
+            <input type="radio" name="gender-select" id="gender-select" value="Male">Male
+            <input type="radio" name="gender-select" id="gender-select" value="Female">Female
+            <input type="radio" name="gender-select" id="gender-select" value="Other">Other
+        </td>
+        </tr> 
+<!--food-->     <tr>         
+         <td><p class="FoodCB"><b>Choice of food(must choose at least 2 out of 5 options):</b></p></td>   
+         <td>
+                <div class="options">
+                    <input type="checkbox" id="food1" value="Manchurian" name="Manchurian">
+                    <label for="Manchurian">Manchurian</label><br>
+                      <input type="checkbox" id="food2" value="Dosa" name="Dosa">
+                    <label for="Dosa">Dosa</label><br>
+                      <input type="checkbox" id="food3" value="Eggroll" name="Eggroll">
+                    <label for="Eggroll">Eggroll</label><br>       
+                      <input type="checkbox" id="food4" value="Biryani" name="Biryani">
+                    <label for="Biryani">Biryani</label><br>
+                      <input type="checkbox" id="food5" value="FriedRice" name="FriedRice">
+                    <label for="FriedRice">FriedRice</label>
+                    </div>
+                </td>
+<!--State-->      </tr>    
+            <tr>
+          <td><label for="state"><b>State :</b></label><br></td>  
+          <td>
+            <input type="text" id="state" name="state" required><br>
+        </td>
+        </tr>
+<!--Country-->   
+         <tr>                 
+           <td><label for="country"><b>Country :</b></label><br></td> 
+           <td>
+            <input type="text" id="country" name="country" required><br>
+        </td>
+
+        </tr>
+<!--Submit Button-->  
+             <tr>     
+           <td></td>
+         <td><input type="button" class="btn btn-secondary" value="Submit" onclick={validate()}></td> 
+
+        </tr>
+        </form><br>
+    </table>
+        <div>
+<!--Table to filled when submited-->                  
+            <table class="table" id="datastored">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Pincode</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">choice of food</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Country</th>
+                  </tr>
+                </thead>
+            </table>
+       
+    </div>
+
+   
+    <script src="script1.js"></script>
+</body>
+</html>
